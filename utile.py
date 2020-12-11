@@ -8,6 +8,19 @@ Module pour les fonctions utiles
 
 import numpy as np
 
+def generate_X(n,m,s):
+
+    return np.random.normal(m,s,(n,2))
+
+def dominate(a,b):
+
+
+
+    if a[0] < b[0] and a[1] < b[1]:
+        return True
+    else :
+        return False
+
 """
 Partie Tri Fusion
 """
