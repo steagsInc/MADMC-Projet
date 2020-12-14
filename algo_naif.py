@@ -13,7 +13,3 @@ def algo_naif(X):
             S.append(x)
 
     return np.array(S)
-
-test = algo_naif(generate_X(1000,1000,250))
-
-print(test)

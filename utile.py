@@ -8,7 +8,9 @@ Module pour les fonctions utiles
 
 import numpy as np
 
-def generate_X(n,m,s):
+def generate_X(n,m):
+
+    s=m/4
 
     return np.random.normal(m,s,(n,2))
 
@@ -59,7 +61,7 @@ def tri_sys(T):  # Alternative
 
 def algo_Q_4(T):  # Nom temporaire bien sûr, je n'ai pas trop d'inspiration
     # Tri
-    T_tri = tri_fusion(T)
+    T_tri = tri_sys(T)
 
     # Initialisation
     c2_min = T_tri[0, 1]
