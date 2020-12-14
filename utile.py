@@ -8,7 +8,7 @@ Module pour les fonctions utiles
 
 import numpy as np
 
-def generate_X(n,m):
+def generate_Y(n,m):
 
     s=m/4
 

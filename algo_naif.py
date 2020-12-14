@@ -1,15 +1,17 @@
 from utile import *
 
-def algo_naif(X):
+def algo_naif(Y):
     S = []
+    n=0
 
-    for x in X:
+    for y in Y:
         dominated = False
-        for y in X:
-            if dominate(y,x):
+        for y' in Y[n:]:
+            if dominate(y',y):
                 dominated=True
                 break
         if not dominated:
-            S.append(x)
+            S.append(y)
+        n+=1
 
     return np.array(S)
