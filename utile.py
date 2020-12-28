@@ -57,20 +57,3 @@ def tri_fusion(T):  # Implementation maison
 def tri_sys(T):  # Alternative
     # https://numpy.org/devdocs/reference/generated/numpy.lexsort.html
     return np.array([T[i] for i in np.lexsort((T[:, 1], T[:, 0]))])
-
-
-def algo_Q_4(T):  # Nom temporaire bien sûr, je n'ai pas trop d'inspiration
-    # Tri
-    T_tri = tri_sys(T)
-
-    # Initialisation
-    c2_min = T_tri[0, 1]
-    T_nd = np.array([T_tri[0]])
-
-    # Boucle
-    for i in range(len(T_tri)):
-        c2 = T_tri[i, 1]
-        if c2_min > c2:
-            T_nd = np.append(T_nd, [T_tri[i]], axis=0)
-            c2_min = c2
-    return T_nd
