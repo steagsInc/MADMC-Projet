@@ -19,7 +19,7 @@ def algo_naif(Y):
 
     return np.array(S)
 
-def algo_Q_4(T):  # Nom temporaire bien sûr, je n'ai pas trop d'inspiration
+def algo_Q_4(T):
     # Tri
     T_tri = tri_sys(T)
 

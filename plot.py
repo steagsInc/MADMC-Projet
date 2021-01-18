@@ -3,7 +3,7 @@ from utile import *
 from algo import *
 import matplotlib.pyplot as plt
 
-def mesure():
+def Q5():
 
     m=1000
     max = 10001
@@ -34,12 +34,14 @@ def mesure():
 
     n = np.array(range(200,max,200))
 
-    plt.plot(n, np.array(time_Q3),'c',label='Q3')
-    plt.plot(n, np.array(time_Q4),'r',label='Q4')
+    plt.plot(n, np.array(time_Q3),'c',label='naif')
+    plt.plot(n, np.array(time_Q4),'r',label='amélioré')
+    plt.ylabel('Time')
+    plt.xlabel('n')
     plt.legend()
     plt.show()
 
-def mesure_a():
+def Q12():
 
     n=50
     k=10
@@ -76,8 +78,10 @@ def mesure_a():
     n = np.array(range(25,501,25))
     n = n/1000
 
-    plt.plot(n, np.array(time_Q3),'c',label='P3')
-    plt.plot(n, np.array(time_Q4),'r',label='P4')
+    plt.plot(n, np.array(time_Q3),'c',label='Partie 3')
+    plt.plot(n, np.array(time_Q4),'r',label='Partie 4')
+    plt.ylabel('Time')
+    plt.xlabel('ε')
     plt.legend()
     plt.show()
 
@@ -106,8 +110,8 @@ def front(k,Y,I):
     print(P3.shape)
     print(P4.shape)
 
-    plt.scatter(P3[:,0],P3[:,1],label='P3')
-    plt.scatter(P4[:,0],P4[:,1],label='P4')
+    plt.scatter(P3[:,0],P3[:,1],label='Partie 3')
+    plt.scatter(P4[:,0],P4[:,1],label='Partie 4')
     plt.legend()
     plt.show()
 
@@ -115,4 +119,6 @@ I = [0.5-0.025,0.5+0.025]
 
 Y = generate_Y(50,100)
 
-plot_transformed(Y,I)
+#plot_transformed(Y,I)
+
+Q5()
