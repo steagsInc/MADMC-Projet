@@ -122,3 +122,4 @@ Y = generate_Y(50,100)
 #plot_transformed(Y,I)
 
 Q5()
+Q12()
